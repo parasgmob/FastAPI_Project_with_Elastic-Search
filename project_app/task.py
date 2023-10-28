@@ -5,17 +5,7 @@ from celery           import Celery, shared_task
 from fastapi_mail     import FastMail, MessageSchema,ConnectionConfig
 from configurations   import TWILIO_ACCOUNT_SID,TWILIO_AUTH_TOKEN,TWILIO_PHONE_NO,REDIS_CONNECTION
 
-conf = ConnectionConfig(
-    MAIL_USERNAME="mahendra.chaurasiya@mobcoder.com",
-    MAIL_PASSWORD="M9810232935",
-    MAIL_FROM="mahendra.chaurasiya@mobcoder.com",
-    MAIL_PORT=465,
-    MAIL_SERVER="smtp.gmail.com",
-    MAIL_STARTTLS = False,
-    MAIL_SSL_TLS = True,
-    USE_CREDENTIALS = True,
-    VALIDATE_CERTS = True
-)
+
 
 async def send_mail(request_mail):
    try:
